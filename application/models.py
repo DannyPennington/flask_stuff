@@ -8,7 +8,4 @@ class Posts(db.Model):
     content = db.Column(db.String(500), nullable=False)
 
     def __repr__(self):
-        return ''.join([
-            'User: ', self.first_name, '', self.last_name, '\r\n',
-            'Title: ', self.title, '\r\n', self.content
-            ])
+        return ''.join(['User: ', self.first_name, '', self.last_name, '\r\n', 'Title: ', self.title, '\r\n', self.content])
