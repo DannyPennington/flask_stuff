@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
 
 {% block body_content %}
-<h1>{{ title }}</h1>
+	<h1>{{ title }}</h1>
+		{% for post in posts %}
+			<div>
+				<h3>Post {{ post.id }}</h3>
+				<p>Author: {{ post.first_name }} {{ post.last_name }}</p>
+				<p>Title: {{ post.title }}</p>
+				<p>Content: {{ post.content }}</p>
+			</div>
+		{% endfor %}
 {% endblock %}
