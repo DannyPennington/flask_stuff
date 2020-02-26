@@ -52,7 +52,7 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField("Sign up!")
 
     def validate_email(self,email):
-        user = Users.query.filter_by(email=email.data).all()
+        user = Users.query.filter_by(email=email.data).first()
 
         if user:
             raise ValidationError('Email already in use!')

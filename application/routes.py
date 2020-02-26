@@ -23,7 +23,7 @@ def login():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        hash_pw = bcrypt.generate_password_hash(form.password.data.decode('utf-8'))
+        hash_pw = bcrypt.generate_password_hash(form.password.data)
 
         user = Users(email=form.email.data, password=hash_pw)
 
