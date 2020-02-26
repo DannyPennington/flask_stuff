@@ -17,6 +17,30 @@
 			</div>
 			<br>
 			<div class='form_group'>
+				{{ form.first_name.label }}
+				{{ form.first_name }}
+				{% if form.first_name.errors %}
+					<div class='error'>
+						{% for error in form.first_name.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+			<br>
+			<div class='form_group'>
+				{{ form.last_name.label }}
+				{{ form.last_name }}
+				{% if form.last_name.errors %}
+					<div class='error'>
+						{% for error in form.last_name.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+			<br>
+			<div class='form_group'>
 				{{ form.password.label }}
 				{{ form.password }}
 				{% if form.password.errors %}
@@ -27,6 +51,7 @@
 					</div>
 				{% endif %}
 			</div>
+			<br>
 			<div class='form_group'>
 				{{ form.confirm_password.label }}
 				{{ form.confirm_password }}

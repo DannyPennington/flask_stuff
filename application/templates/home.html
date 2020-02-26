@@ -5,9 +5,10 @@
 		{% for post in posts %}
 			<div>
 				<h3>Post {{ post.id }}</h3>
-				<p>Author: {{ post.first_name }} {{ post.last_name }}</p>
-				<p>Title: {{ post.title }}</p>
-				<p>Content: {{ post.content }}</p>
+				<p>{{ post.title }}</p>
+				<span>by <i>{{ post.author.first_name }} {{ post.author.last_name }}</i></span>
+				<span>on the <i>{{ post.date_posted }}</i></span>
+				<p>{{ post.content }}</p>
 			</div>
 		{% endfor %}
 {% endblock %}
